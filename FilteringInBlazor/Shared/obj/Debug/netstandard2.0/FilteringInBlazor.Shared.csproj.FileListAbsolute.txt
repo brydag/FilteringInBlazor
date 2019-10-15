@@ -1,0 +1,8 @@
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\bin\Debug\netstandard2.0\FilteringInBlazor.Shared.deps.json
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\bin\Debug\netstandard2.0\FilteringInBlazor.Shared.dll
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\bin\Debug\netstandard2.0\FilteringInBlazor.Shared.pdb
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\obj\Debug\netstandard2.0\FilteringInBlazor.Shared.AssemblyInfoInputs.cache
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\obj\Debug\netstandard2.0\FilteringInBlazor.Shared.AssemblyInfo.cs
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\obj\Debug\netstandard2.0\FilteringInBlazor.Shared.dll
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\obj\Debug\netstandard2.0\FilteringInBlazor.Shared.pdb
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor\Shared\obj\Debug\netstandard2.0\FilteringInBlazor.Shared.csprojAssemblyReference.cache

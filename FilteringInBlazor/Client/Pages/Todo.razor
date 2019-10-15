@@ -1,0 +1,79 @@
+﻿@page "/todo"
+@using FilteringInBlazor.Shared.ViewModels
+@using System
+@inject HttpClient Http
+
+
+<h1>Todo (@todos.Count(todo => !todo.IsDone))</h1>
+
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input type="checkbox" checked="@todo.IsDone" value=@todo.IsDone @onchange="() => HandleChangeTaskState(todo.Id, todo.IsDone, todo.Title)" />
+            <input @bind="todo.Title" />
+        </li>
+    }
+</ul>
+
+<input placeholder="Something todo" @bind="newTodo" />
+<button @onclick="AddItem">Add todo</button>
+
+<input type="checkbox" checked="@hideCompletedTasksCheckbox" value=@hideCompletedTasks @onchange="HideCompletedTasks" />
+<label class="form-check-label">Hide Completed Tasks</label>
+
+<SearchTasks/>
+
+@code {
+    private IList<TodoItem> todos = new List<TodoItem>();
+    private string newTodo;
+    private bool hideCompletedTasks = false;
+    private bool hideCompletedTasksCheckbox = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        todos = await Http.GetJsonAsync<List<TodoItem>>("todo/" + hideCompletedTasks);
+    }
+
+    private async Task AddItem()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            var newItem = new TodoItem
+            {
+                Title = newTodo
+            };
+            Http.PostJsonAsync<TodoItem>("todo", newItem);
+
+            newTodo = string.Empty;
+
+            this.StateHasChanged();
+        }
+    }
+
+    private async Task HideCompletedTasks()
+    {
+        this.StateHasChanged();
+        hideCompletedTasks = !hideCompletedTasks;
+        todos = await Http.GetJsonAsync<List<TodoItem>>("todo/" + hideCompletedTasks);
+    }
+
+    private async Task HandleChangeTaskState(int id, bool isDone, string title)
+    {
+        bool newState = isDone == true ? false : true;
+        ChangeTaskState(id, newState, title);
+    }
+
+    private async Task ChangeTaskState(int id, bool isDone, string title)
+    {
+        this.StateHasChanged();
+        var task = new TodoItem
+        {
+            Id = id,
+            IsDone = isDone,
+            Title = title
+        };
+
+        await Http.PutJsonAsync($"todo", task);
+    }
+}

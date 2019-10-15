@@ -1,0 +1,10 @@
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\bin\Debug\netcoreapp3.0\FilteringInBlazor.Database.deps.json
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\bin\Debug\netcoreapp3.0\FilteringInBlazor.Database.runtimeconfig.json
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\bin\Debug\netcoreapp3.0\FilteringInBlazor.Database.runtimeconfig.dev.json
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\bin\Debug\netcoreapp3.0\FilteringInBlazor.Database.dll
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\bin\Debug\netcoreapp3.0\FilteringInBlazor.Database.pdb
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\obj\Debug\netcoreapp3.0\FilteringInBlazor.Database.AssemblyInfoInputs.cache
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\obj\Debug\netcoreapp3.0\FilteringInBlazor.Database.AssemblyInfo.cs
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\obj\Debug\netcoreapp3.0\FilteringInBlazor.Database.dll
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\obj\Debug\netcoreapp3.0\FilteringInBlazor.Database.pdb
+C:\Mentoring\GitHub\App\FilteringInBlazor\FilteringInBlazor.Database\obj\Debug\netcoreapp3.0\FilteringInBlazor.Database.csprojAssemblyReference.cache

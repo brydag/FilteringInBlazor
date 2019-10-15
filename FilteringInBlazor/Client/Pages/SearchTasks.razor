@@ -1,0 +1,33 @@
+﻿@page "/searchTasks"
+@using FilteringInBlazor.Shared.ViewModels
+@using System
+@inject HttpClient Http
+
+<h3>SearchTasks</h3>
+
+<BlazoredTypeahead SearchMethod="SearchTextTasks"
+                   @bind-Value="SelectedTask">
+    <SelectedTemplate>
+        @context.Title
+    </SelectedTemplate>
+    <ResultTemplate>
+        @context.Title (@context.IsDone)
+    </ResultTemplate>
+</BlazoredTypeahead>
+
+@if (SelectedTask != null)
+{
+    <p>Selected Task is: @SelectedTask.Title</p>
+}
+
+@code {
+    private TodoItem SelectedTask;
+
+    private async Task<IEnumerable<TodoItem>> SearchTextTasks(string searchText)
+    {
+        var response = await Http.GetJsonAsync<IEnumerable<TodoItem>>("todo/tasks/" + searchText);
+
+        return response;
+    }
+
+}
